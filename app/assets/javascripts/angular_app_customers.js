@@ -13,6 +13,6 @@
 
   angular
     .module('customers',["ngRoute","templates"])
-    .config(["$routeProvider",config]);
+    .config(["$routeProvider", config]);
 
 })();
