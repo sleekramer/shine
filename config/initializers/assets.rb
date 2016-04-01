@@ -27,3 +27,6 @@ Rails.application.config.assets.precompile += %w( customers/CustomerDetailContro
 Rails.application.config.assets.precompile += %w( angular-rails-templates.self.js )
 Rails.application.config.assets.precompile += %w( customers/_customer_search.self.js )
 Rails.application.config.assets.precompile += %w( customers/_customer_detail.self.js )
+Rails.application.config.assets.precompile += %w( angular-resource/angular-resource.self.js )
+Rails.application.config.assets.precompile += %w( customers/CustomerCreditCardController.self.js )
+Rails.application.config.assets.precompile += %w( controllers/customer_credit_card_controller_spec.self.js )

@@ -12,7 +12,7 @@
     }
 
   angular
-    .module('customers',["ngRoute","templates"])
+    .module('customers',["ngRoute","templates","ngResource"])
     .config(["$routeProvider", config]);
 
 })();

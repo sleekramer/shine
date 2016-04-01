@@ -1,15 +1,12 @@
 (function () {
-  function CustomerDetailController ($scope, $routeParams, $http) {
-    var customerId = $routeParams.id;
-    $scope.customer = {};
-    $http.get("/customers/" + customerId + ".json").then(function(response) {
-      $scope.customer = response.data;
-    }, function(response) {
-      alert("There was a problem: " + response.status);
-    });
+  function CustomerDetailController ($scope, $routeParams, $resource) {
+    $scope.customerId = $routeParams.id;
+    var Customer = $resource('/customers/:customerId.json');
+
+    $scope.customer = Customer.get({"customerId":$scope.customerId});
   }
 
   angular
     .module("customers")
-    .controller("CustomerDetailController",["$scope", "$routeParams", "$http", CustomerDetailController]);
+    .controller("CustomerDetailController",["$scope", "$routeParams", "$resource", CustomerDetailController]);
 })();
