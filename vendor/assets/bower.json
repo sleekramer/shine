@@ -3,6 +3,7 @@
   "dependencies": {
     "bootstrap-sass-official": "latest",
     "angular-resource": "latest",
+    "angular-messages": "latest",
     "angular-mocks": "latest",
     "angular-route": "latest",
     "angular": "~>1.5"
